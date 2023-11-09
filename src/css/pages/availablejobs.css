@@ -1,0 +1,22 @@
+.hr1{
+    height: 20%;
+    width: 100%;
+}
+.h2{
+    height: 80%;
+    width: 100%;    
+}
+
+.ht{
+    font-size: xx-large;
+}
+
+.tableBox{
+    width: 70%;
+    height: 100%;
+}
+
+.tablelable{
+    border-bottom: solid;
+    color: black; 
+}

@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*:not(head){
+  display: flex
+}
+
+.container{
+  height: 100vh;
+  width: 100vw;
+}
+
+@import url("../src/css/reusables/colors.css");
+@import url("../src/css/reusables/dimension.css");
+@import url("../src/css/reusables/flex.css");
+@import url("../src/css/reusables/position.css");

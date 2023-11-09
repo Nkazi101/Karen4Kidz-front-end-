@@ -1,0 +1,91 @@
+/* availablejobs.css */
+
+.fill {
+  width: 100%;
+  max-width: 1200px; /* You can set max-width as you prefer */
+  margin: 0 auto; /* This centers your job listings in the middle of the page */
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.hr1, .back1 {
+  margin-top: 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem; /* Adjust size as needed */
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+th {
+  background-color: #f2f2f2; /* A light grey background for header */
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  border-bottom: 2px solid #ddd; /* Light grey border */
+}
+
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* Light grey border */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Zebra striping for rows */
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1; /* Light grey background on row hover */
+}
+
+button {
+  background-color: #4CAF50; /* A nice green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px; /* Rounded corners for buttons */
+}
+
+button:hover {
+  background-color: #45a049; /* Darken the button slightly on hover */
+}
+
+.job-box {
+  padding: 10px;
+  margin-bottom: 10px; /* Spacing between job boxes */
+  border: 1px solid #ddd; /* Add a border to the job box */
+  border-radius: 4px; /* Rounded corners for the job boxes */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}

@@ -1,0 +1,23 @@
+.back1{
+    background-color: #FAFAFA ;
+}
+.back2{
+    background-color: #C7EEFF;
+}
+.back3{
+    background-color: #0077C0;
+}
+.back4{
+    background-color: #1D242B;
+}
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/home_transaction.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    position: fixed;
+}
