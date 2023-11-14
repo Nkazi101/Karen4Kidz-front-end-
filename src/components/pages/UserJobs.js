@@ -25,7 +25,9 @@ function UserJobs(props) {
 
     return (
         <div className='user-jobs-container'>
+            
             <div>
+                
                 <select onChange={(e) => setStatus(e.target.value)} value={status}>
                     <option value="PENDING">Pending</option>
                     <option value="IN_PROGRESS">In Progress</option>

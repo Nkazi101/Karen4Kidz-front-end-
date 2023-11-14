@@ -36,6 +36,7 @@ function AvailableJobs(props) {
     return (
        
         <div className='available-jobs-container' style={{ alignSelf: 'flex-start' }} >
+          
             <div className='job-grid'>
                 {/* <div className='grid-header'>ID</div> */}
                 <div className='grid-header'>HouseHold</div>

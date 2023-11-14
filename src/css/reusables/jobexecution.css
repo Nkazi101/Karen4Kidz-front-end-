@@ -1,0 +1,53 @@
+.job-execution {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 300px;
+  }
+  
+  .job-execution h1 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .job-info {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .job-info p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .start-job-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .start-job-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .job-map p {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  

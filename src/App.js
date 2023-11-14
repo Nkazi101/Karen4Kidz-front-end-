@@ -13,6 +13,7 @@ import ChildrenManagerWrapper from './components/reusables/ChildrenManagerWrappe
 import JobExecution from './components/pages/JobExecution';
 import UserJobs from './components/pages/UserJobs';
 import { GoogleMap } from '@react-google-maps/api';
+import Profile from './components/pages/Profile';
 
 function App(){
 
@@ -53,7 +54,7 @@ return (
   <Route path="/job/:pickedJobId" element={<JobExecution user={user} setUser={setUser}/>}/>
   <Route path="/userjobs" element={<UserJobs user={user} setUser={setUser}/>} />
   <Route path="/map/:jobId" element={<GoogleMap />} />
-
+  <Route path="/profile" element={<Profile user={user} />} /> 
   </Routes>
 
   </PageWrapper>

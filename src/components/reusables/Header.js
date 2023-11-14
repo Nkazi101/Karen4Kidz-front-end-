@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import "../../css/reusables/header.css";
+import logoImage from '../../css/images/karenlogo.png'
 
 function Header(props, pickedJobId) {
 
@@ -15,7 +16,9 @@ function Header(props, pickedJobId) {
     return (
         <header className='header'>
             <div className="header-content">
-                <Link to="/" className="logo">Logo</Link>
+            <Link to="/" className="logo">
+                    <img src={logoImage} alt="Logo" className="logo-image" />
+                </Link>
                 <nav className="navigation">
                     {props.user.id !== undefined ? (
                         <>
