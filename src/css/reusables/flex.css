@@ -1,10 +1,18 @@
-.flex-row {
+/* .flex-row {
     flex-direction: row;
-}
+} */
 
-.flex-col {
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligns items to start on cross axis */
+  }
+  
+  .flex-col {
+    display: flex;
     flex-direction: column;
-}
+  }
+  
 .inline {
     display: inline-flex;
     /*no difference to display:flex; */
@@ -15,3 +23,4 @@
 .scroll{
     overflow: scroll;
 }
+

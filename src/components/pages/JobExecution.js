@@ -3,22 +3,22 @@ import axios from 'axios';
 import GoogleMap from './GoogleMap';
 import { useParams } from 'react-router-dom';
 
-function JobExecution({}) {
+function JobExecution() {
   const [job, setJob] = useState(null);
   const [jobStarted, setJobStarted] = useState(false);
 
-  const { id } = useParams();
+  const { pickedJobId } = useParams();
 
   useEffect(() => {
     // Fetch job details when component mounts
-    axios.get(`http://localhost:8080/findJobById/${id}`)
+    axios.get(`http://localhost:8080/findJobById/${pickedJobId}`)
       .then(response => setJob(response.data))
       .catch(error => console.error('Error fetching job details', error));
-  }, [id]);
+  }, [pickedJobId]);
 
   const handleStartJob = () => {
     // Call API to update job status to 'In Progress'
-    axios.put(`http://localhost:8080/startjob/${id}`)
+    axios.put(`http://localhost:8080/startjob/${pickedJobId}`)
       .then(response => {
         setJob(response.data);
         setJobStarted(true);   

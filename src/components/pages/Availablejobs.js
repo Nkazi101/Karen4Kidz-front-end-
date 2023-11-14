@@ -25,6 +25,9 @@ function AvailableJobs(props) {
             setJobs(currentJobs =>
                 currentJobs.map(job => (job.id === jobId ? response.data : job))
             );
+            console.log(jobId)
+            props.setPickedJobId(response.data.job.id)
+
         } catch (error) {
             console.error('Error picking up job', error);
         }
@@ -32,27 +35,18 @@ function AvailableJobs(props) {
 
     return (
        
-        <div className='available-jobs-container'>
-          
-            <div className='table-container'>
-                <table>
+        <div className='available-jobs-container' style={{ alignSelf: 'flex-start' }} >
+            <div className='job-grid'>
+                {/* <div className='grid-header'>ID</div> */}
+                <div className='grid-header'>HouseHold</div>
+                <div className='grid-header'>Pick-Up Address</div>
+                <div className='grid-header'>Drop-Off Address</div>
+                <div className='grid-header'>Pick-Up Date/Time</div>
+                <div className='grid-header'>Actions</div>
                 
-                    <thead>
-                        <tr>
-                            <td>ID</td>
-                            <td>Pick-Up Address</td>
-                            <td>Drop-Off Address</td>
-                            <td>Pick-Up Date/Time</td>
-                            <td>Actions</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {jobs.map(job => (
-                            
-                            <JobBox key={job.id} job={job} handleJobPickUp={handleJobPickUp} />
-                        ))}
-                    </tbody>
-                </table>
+                {jobs.map(job => (
+                    <JobBox key={job.id} job={job} handleJobPickUp={handleJobPickUp} />
+                ))}
             </div>
         </div>
     );

@@ -3,19 +3,18 @@ import '../../css/pages/availablejobs.css';
 
 function JobBox({ job, handleJobPickUp }) {
     return (
-
-        <tr className='job-box'>
-            <td>{job.id}</td>
-            <td>{job.pickUpAddress}</td>
-            <td>{job.dropOffAddress}</td>
-            <td>{job.pickUpDateTime}</td>
+        <>
+            <div className='grid-cell'>{job.child && job.child.lastName}</div>
+            <div className='grid-cell'>{job.pickUpAddress}</div>
+            <div className='grid-cell'>{job.dropoffAddress}</div>
+            <div className='grid-cell'>{job.pickUpTime}</div>
             
+            <div className='grid-cell'>
                 <button className="pickup-btn" onClick={() => handleJobPickUp(job.id)}>
                     Pick Up
                 </button>
-            
-        </tr>
-       
+            </div>
+        </>
     );
 }
 

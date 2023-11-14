@@ -12,10 +12,13 @@ import Createjobs from './components/pages/Createjobs';
 import ChildrenManagerWrapper from './components/reusables/ChildrenManagerWrapper';
 import JobExecution from './components/pages/JobExecution';
 import UserJobs from './components/pages/UserJobs';
+import { GoogleMap } from '@react-google-maps/api';
 
 function App(){
 
 const [user, setUser] = useState({ id: undefined, firstName: "", lastName:"", email: "", password: "", isAdmin: false, })
+
+const [pickedJobId, setPickedJobId] = useState(null);
 
 useEffect(() => {
 
@@ -35,21 +38,22 @@ useEffect(() => {
 
 }, []
 
-
-
 )
+
 return (
 
-  <PageWrapper user={user} setUser={setUser}>
+  <PageWrapper user={user} setUser={setUser} pickedJobId={pickedJobId}>
  <Routes>
   <Route path ="/" element = {<Home user={user} setUser={setUser}/>}/>
   <Route path ="/signin" element = {<SignIn user={user} setUser={setUser}/>}/>
   <Route path ="/signup" element = {<Signup user={user} setUser={setUser}/>}/>     
   <Route path ="/createjob" element = {<Createjobs user={user} setUser={setUser}/>}/>     
-  <Route path ="/selectjob" element = {<Availablejobs user={user} setUser={setUser}/>}/>     
+  <Route path ="/selectjob" element = {<Availablejobs user={user} setUser={setUser} setPickedJobId ={setPickedJobId}/>}/>     
   <Route path="/manage-children/:id" element={<ChildrenManagerWrapper user={user} setUser={setUser} />} />
-  <Route path="/job/:id" element={<JobExecution user={user} setUser={setUser} />} />
+  <Route path="/job/:pickedJobId" element={<JobExecution user={user} setUser={setUser}/>}/>
   <Route path="/userjobs" element={<UserJobs user={user} setUser={setUser}/>} />
+  <Route path="/map/:jobId" element={<GoogleMap />} />
+
   </Routes>
 
   </PageWrapper>

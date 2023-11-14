@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import JobBox from '../reusables/JobBox';
+import UserJobBox from '../reusables/UserJobBox';
 
 function UserJobs(props) {
     const [jobs, setJobs] = useState([]);
@@ -21,7 +21,7 @@ function UserJobs(props) {
         }
     }, [props.user, status]);
 
-    
+     
 
     return (
         <div className='user-jobs-container'>
@@ -32,24 +32,20 @@ function UserJobs(props) {
                     <option value="COMPLETED">Completed</option>
                 </select>
             </div>
-            <div className='table-container'>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Pick-Up Address</th>
-                            <th>Drop-Off Address</th>
-                            <th>Pick-Up Date/Time</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            <div className='available-jobs-container' style={{ alignSelf: 'flex-start' }} >
+            <div className='job-grid'>
+                {/* <div className='grid-header'>ID</div> */}
+                <div className='grid-header'>HouseHold</div>
+                <div className='grid-header'>Pick-Up Address</div>
+                <div className='grid-header'>Drop-Off Address</div>
+                <div className='grid-header'>Pick-Up Date/Time</div>
+                <div className='grid-header'>Actions</div>
+                
                         {Array.isArray(jobs) && jobs.map(job => (
-                            <JobBox key={job.id} job={job} />
+                            <UserJobBox key={job.id} job={job} />
                         ))}
-                    </tbody>
-                </table>
-            </div>
+                   </div>
+        </div>
         </div>
     );
 }
